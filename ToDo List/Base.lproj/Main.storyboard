@@ -43,6 +43,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="QKo-xd-vVg">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="fdT-O4-ytZ">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="x8R-AA-gmq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DYD-Al-QKM">
                             <connections>
                                 <segue destination="zl1-6R-CGG" kind="presentation" identifier="AddDetail" id="bDN-Qx-7W3"/>
@@ -50,6 +55,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="DYD-Al-QKM" id="ZSH-Ep-wQW"/>
                         <outlet property="tableView" destination="SZR-Bh-qcn" id="hcT-qM-Aoe"/>
                     </connections>
                 </viewController>
@@ -76,7 +82,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-dm-qDf">
-                                                    <rect key="frame" x="20" y="5" width="334" height="34"/>
+                                                    <rect key="frame" x="19" y="5" width="335" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
