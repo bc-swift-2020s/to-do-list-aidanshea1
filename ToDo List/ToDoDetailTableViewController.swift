@@ -14,7 +14,7 @@ class ToDoDetailTableViewController: UITableViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var noteView: UITextView!
     
-    var toDoItem: ToDoItem
+    var toDoItem: ToDoItem! // added an exclamation point
     
     override func viewDidLoad() {
         super.viewDidLoad()
