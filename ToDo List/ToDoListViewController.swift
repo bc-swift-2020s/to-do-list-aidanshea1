@@ -160,15 +160,13 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource, Li
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("😎 numberOfRowsInSection was just called. Returning \(toDoItems.count)")
         return toDoItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ListTableViewCell
         cell.delegate = self
-        cell.nameLabel.text = toDoItems[indexPath.row].name
-        cell.checkBoxButton.isSelected = toDoItems[indexPath.row].completed
+        cell.toDoItem = toDoItems[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
